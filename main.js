@@ -19,6 +19,11 @@ define(function (require, exports, module) {
         codeMirror.operation(function () {
             codeMirror.eachLine(function (line) {
                 codeMirror.indentLine(line.lineNo());
+				var text = line.text.trim();
+				if(text.substr(0,1) === '.'){
+					console.log('handling: ' + text);
+					codeMirror.indentLine(line.lineNo(),"subtract"); 
+				}
             });
         });
     }
