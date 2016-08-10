@@ -1,6 +1,35 @@
 Indentator
 ==========
 
+##Extra Feature
+
+Fix indents for lines starting with a dot. I personally use this for promises.
+
+###Example: 
+
+**Normal Indentator:**
+
+```
+database.getUser()
+
+	.then(function(user){ 
+	// ...
+},function(err){
+	// ...
+});
+```
+
+**After Fix:**
+```
+database.getUser()
+
+.then(function(user){ 
+	// ...
+},function(err){
+	// ...
+});
+```
+
 **Extension for Adobe Brackets**
 
 Re-indent a document according to your current indentation settings.
