@@ -21,7 +21,6 @@ define(function (require, exports, module) {
                 codeMirror.indentLine(line.lineNo());
 				var text = line.text.trim();
 				if(text.substr(0,1) === '.'){
-					console.log('handling: ' + text);
 					codeMirror.indentLine(line.lineNo(),"subtract"); 
 				}
             });
